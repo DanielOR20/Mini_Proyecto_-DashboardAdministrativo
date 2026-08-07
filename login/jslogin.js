@@ -17,7 +17,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         // Uso de LocalStorage para guardar sesión
         localStorage.setItem('sesionActiva', 'true');
         localStorage.setItem('usuario', user);
-        window.location.href = 'dashboard.html';
+        
+        // CORRECCIÓN: Salimos de la carpeta login/ y entramos a dashboard/index.html
+        window.location.href = '../dashboard/index.html';
     } else {
         errorMsg.style.display = 'block';
     }
