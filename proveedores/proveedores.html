@@ -18,11 +18,9 @@
             <a href="proveedores.html">Proveedores</a>
             <a href="#" id="logout">Cerrar Sesión</a>
         </div>
-
         <div class="main-content">
             <h1>Gestión de Proveedores</h1>
-            
-            <!-- Formulario de Registro adaptado a tu CSS -->
+
             <div class="card">
                 <h3>Agregar Nuevo Proveedor</h3>
                 <form id="formProveedor">
@@ -41,9 +39,7 @@
                     <button type="submit" class="btn">Guardar Proveedor</button>
                 </form>
             </div>
-
-            <!-- Tabla adaptada a tu CSS -->
-            <div class="card">
+            <div class="card" style="margin-top: 20px;">
                 <h3>Lista de Proveedores</h3>
                 <table>
                     <thead>
@@ -55,13 +51,12 @@
                         </tr>
                     </thead>
                     <tbody id="tablaProveedores">
-                        <!-- Se llena dinámicamente desde JS -->
+                        <!-- Carga dinámica -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
     <script src="proveedores.js"></script>
 </body>
 </html>
