@@ -15,26 +15,35 @@
             <a href="../dashboard/dashboard.html">Dashboard</a>
             <a href="../clientes/clientes.html">Clientes</a>
             <a href="../productos/productos.html">Productos</a>
-            <a href="../proveedores/index.html">Proveedores</a>
+            <a href="proveedores.html">Proveedores</a>
             <a href="#" id="logout">Cerrar Sesión</a>
         </div>
 
         <div class="main-content">
             <h1>Gestión de Proveedores</h1>
             
-            <!-- Formulario de Registro -->
+            <!-- Formulario de Registro adaptado a tu CSS -->
             <div class="card">
                 <h3>Agregar Nuevo Proveedor</h3>
                 <form id="formProveedor">
-                    <input type="text" id="nombreProveedor" placeholder="Nombre de la Empresa" required>
-                    <input type="email" id="emailProveedor" placeholder="Correo de contacto" required>
-                    <input type="text" id="telefonoProveedor" placeholder="Teléfono" required>
-                    <button type="submit">Guardar Proveedor</button>
+                    <div class="form-group">
+                        <label for="nombreProveedor">Nombre Empresa:</label>
+                        <input type="text" id="nombreProveedor" placeholder="Ej. Distribuidora S.A." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailProveedor">Correo Electrónico:</label>
+                        <input type="email" id="emailProveedor" placeholder="contacto@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefonoProveedor">Teléfono:</label>
+                        <input type="text" id="telefonoProveedor" placeholder="+506 8888-8888" required>
+                    </div>
+                    <button type="submit" class="btn">Guardar Proveedor</button>
                 </form>
             </div>
 
-            <!-- Tabla de Registros -->
-            <div class="card" style="margin-top: 20px;">
+            <!-- Tabla adaptada a tu CSS -->
+            <div class="card">
                 <h3>Lista de Proveedores</h3>
                 <table>
                     <thead>
@@ -46,13 +55,13 @@
                         </tr>
                     </thead>
                     <tbody id="tablaProveedores">
-                        <!-- Se llena dinámicamente con JS -->
+                        <!-- Se llena dinámicamente desde JS -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <script src="jsproveedores.js"></script>
+    <script src="proveedores.js"></script>
 </body>
 </html>
