@@ -4,67 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Proveedores</title>
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+
     <div class="dashboard-layout">
+
+        <!-- BARRA LATERAL -->
         <div class="sidebar">
+
             <h2>Sistema Admin</h2>
+
             <p>Bienvenido, <span id="userName"></span></p>
+
             <hr>
+
             <a href="../dashboard/dashboard.html">Dashboard</a>
             <a href="../clientes/clientes.html">Clientes</a>
             <a href="../productos/productos.html">Productos</a>
             <a href="proveedores.html">Proveedores</a>
+
+            <!-- ÚNICO BOTÓN DE CERRAR SESIÓN -->
             <a href="#" id="logout">Cerrar Sesión</a>
 
-            <button id="btnCerrarSesion" class="btn-logout">
-            Cerrar sesión
-        </button>
-        
         </div>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
         <div class="main-content">
+
             <h1>Gestión de Proveedores</h1>
 
+
+            <!-- FORMULARIO -->
             <div class="card">
+
                 <h3>Agregar Nuevo Proveedor</h3>
+
                 <form id="formProveedor">
+
                     <div class="form-group">
-                        <label for="nombreProveedor">Nombre Empresa:</label>
-                        <input type="text" id="nombreProveedor" placeholder="Ej. Distribuidora S.A." required>
+
+                        <label for="nombreProveedor">
+                            Nombre Empresa:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreProveedor"
+                            placeholder="Ej. Distribuidora S.A."
+                            required
+                        >
+
                     </div>
+
+
                     <div class="form-group">
-                        <label for="emailProveedor">Correo Electrónico:</label>
-                        <input type="email" id="emailProveedor" placeholder="contacto@empresa.com" required>
+
+                        <label for="emailProveedor">
+                            Correo Electrónico:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="emailProveedor"
+                            placeholder="contacto@empresa.com"
+                            required
+                        >
+
                     </div>
+
+
                     <div class="form-group">
-                        <label for="telefonoProveedor">Teléfono:</label>
-                        <input type="text" id="telefonoProveedor" placeholder="+506 8888-8888" required>
+
+                        <label for="telefonoProveedor">
+                            Teléfono:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefonoProveedor"
+                            placeholder="+506 8888-8888"
+                            required
+                        >
+
                     </div>
-                    <button type="submit" class="btn">Guardar Proveedor</button>
+
+
+                    <button type="submit" class="btn">
+                        Guardar Proveedor
+                    </button>
+
                 </form>
+
             </div>
+
+
+            <!-- TABLA -->
             <div class="card" style="margin-top: 20px;">
+
                 <h3>Lista de Proveedores</h3>
+
                 <table>
+
                     <thead>
+
                         <tr>
                             <th>Nombre</th>
                             <th>Email</th>
                             <th>Teléfono</th>
                             <th>Acciones</th>
                         </tr>
+
                     </thead>
+
                     <tbody id="tablaProveedores">
-                        <!-- Carga dinámica -->
+                        <!-- Los proveedores aparecerán aquí -->
                     </tbody>
+
                 </table>
+
             </div>
+
         </div>
+
     </div>
-    <button id="darkModeToggle" class="theme-toggle">🌙</button>
-    
+
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button id="darkModeToggle" class="theme-toggle">
+        🌙
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+
     <script src="../Js/theme-toggle.js"></script>
+
+    <script src="../Js/logout.js"></script>
+
     <script src="proveedores.js"></script>
 
 </body>

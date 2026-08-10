@@ -818,3 +818,97 @@ p {
     background: #bb2d3b;
     transform: translateY(-1px);
 }
+
+/* =========================================
+   MODO OSCURO
+   ========================================= */
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #444444;
+    --card-bg: #2d2d2d;
+    --input-bg: #3a3a3a;
+}
+
+
+/* Fondo general */
+
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+
+/* Contenido */
+
+[data-theme="dark"] .main-content {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+
+/* Tarjetas */
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+
+/* Formularios */
+
+[data-theme="dark"] form {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+
+/* Inputs */
+
+[data-theme="dark"] input {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+
+/* Texto de labels */
+
+[data-theme="dark"] label {
+    color: var(--text-primary);
+}
+
+
+/* Tablas */
+
+[data-theme="dark"] table {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+
+/* Celdas */
+
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+
+/* Botón del modo oscuro */
+
+[data-theme="dark"] .theme-toggle {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+
+/* Botón cerrar sesión */
+
+[data-theme="dark"] .sidebar a {
+    color: white;
+}
