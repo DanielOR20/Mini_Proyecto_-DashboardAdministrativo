@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Proveedores</title>
-    <!-- Ruta exacta hacia el CSS global -->
+    <!-- Se agrega la 's' a styles.css para vincular el diseño correctamente -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -19,12 +19,10 @@
             <a href="proveedores.html">Proveedores</a>
             <a href="#" id="logout">Cerrar Sesión</a>
         </div>
-
         <div class="main-content">
             <h1>Gestión de Proveedores</h1>
-            
-            <!-- Formulario adaptado a las clases .card, .form-group y .btn -->
-            <div class="card" style="text-align: left;">
+
+            <div class="card">
                 <h3>Agregar Nuevo Proveedor</h3>
                 <form id="formProveedor">
                     <div class="form-group">
@@ -42,9 +40,7 @@
                     <button type="submit" class="btn">Guardar Proveedor</button>
                 </form>
             </div>
-
-            <!-- Contenedor para la tabla con formato de tarjeta -->
-            <div class="card" style="margin-top: 20px; text-align: left;">
+            <div class="card" style="margin-top: 20px;">
                 <h3>Lista de Proveedores</h3>
                 <table>
                     <thead>
@@ -56,13 +52,12 @@
                         </tr>
                     </thead>
                     <tbody id="tablaProveedores">
-                        <!-- Carga dinámica con JS -->
+                        <!-- Carga dinámica -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
     <script src="proveedores.js"></script>
 </body>
 </html>

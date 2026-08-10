@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div class="sidebar">
+            <h2>Sistema Admin</h2>
+            <p>Bienvenido, <span id="userName"></span></p>
+            <hr>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="../clientes/clientes.html">Clientes</a>
+            <a href="../productos/productos.html">Productos</a>
+            <a href="../proveedores/proveedores.html">Proveedores</a>
+            <a href="#" id="logout">Cerrar Sesión</a>
+        </div>
+        <div class="main-content">
+            <h1>Resumen del Sistema</h1>
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Clientes</h3>
+                    <p id="totalClientes">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Productos</h3>
+                    <p id="totalProductos">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga del archivo JS externo con toda la lógica -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
