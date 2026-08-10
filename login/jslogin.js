@@ -18,8 +18,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         localStorage.setItem('sesionActiva', 'true');
         localStorage.setItem('usuario', user);
         
-        // CORRECCIÓN: Salimos de la carpeta login/ y entramos a dashboard/index.html
-        window.location.href = '../dashboard/index.html';
+        // CORRECCIÓN: Salimos de la carpeta login/ y entramos a dashboard/dashboard.html
+        window.location.href = '../dashboard/dashboard.html';
     } else {
         errorMsg.style.display = 'block';
     }
