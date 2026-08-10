@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <!-- CDN de Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="dashboard-layout">
@@ -18,8 +20,10 @@
             <a href="../proveedores/proveedores.html">Proveedores</a>
             <a href="#" id="logout">Cerrar Sesión</a>
         </div>
+
         <div class="main-content">
             <h1>Resumen del Sistema</h1>
+            
             <div class="cards">
                 <div class="card">
                     <h3>Total Clientes</h3>
@@ -30,12 +34,18 @@
                     <p id="totalProductos">0</p>
                 </div>
             </div>
+
+            <!-- Contenedor del Gráfico -->
+            <div class="chart-card">
+                <canvas id="summaryChart"></canvas>
+            </div>
         </div>
     </div>
 
-   <button id="darkModeToggle" class="theme-toggle" title="Cambiar tema"> 🌙 </button>
-    
-   <script src="../Js/theme-toggle.js"></script>
-    
+    <button id="darkModeToggle" class="theme-toggle" title="Cambiar tema">🌙</button>
+
+    <!-- Scripts -->
+    <script src="dashboard.js"></script>
+    <script src="../js/theme-toggle.js"></script>
 </body>
 </html>
