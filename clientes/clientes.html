@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Mismo Head y Sidebar que dashboard.html, solo cambia el main-content -->
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Poner el mismo menú lateral de dashboard.html aquí -->
+        <div class="sidebar">
+
+            <h2>Sistema Admin</h2>
+
+            <a href="../dashboard/dashboard.html">Dashboard</a>
+            <a href="../clientes/clientes.html">Clientes</a>
+            <a href="../productos/productos.html">Productos</a>
+            <a href="../proveedores/proveedores.html">Proveedores</a>
+
+            <button id="btnCerrarSesion" class="btn-logout">
+        Cerrar sesión
+    </button>
+
+
+        </div>
+
+        <div class="main-content">
+            <h1>Gestión de Clientes</h1>
+            <form id="formCliente" style="background: white; padding: 20px; border-radius: 8px;">
+                <input type="text" id="nombreCliente" placeholder="Nombre completo" required>
+                <input type="email" id="emailCliente" placeholder="Correo" required>
+                <button type="submit" class="btn">Guardar Cliente</button>
+            </form>
+            
+            <table>
+                <thead>
+                    <tr><th>Nombre</th><th>Email</th><th>Acciones</th></tr>
+                </thead>
+                <tbody id="tablaClientes"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <button id="darkModeToggle" class="theme-toggle">🌙</button>
+
+    <script src="../Js/theme-toggle.js"></script>
+    <script src="../Js/logout.js"></script>
+    <script src="jsclientes.js"></script>
+
+</body>
+</html>
