@@ -1,5 +1,10 @@
 let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 
+// Validar sesión activa
+if (localStorage.getItem('sesionActiva') !== 'true') {
+    window.location.href = '../login/index.html';
+}
+
 function renderClientes() {
     const tbody = document.getElementById('tablaClientes');
     tbody.innerHTML = '';

@@ -85,20 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-const btnCerrarSesion = document.getElementById('btnCerrarSesion');
-
-
-if (btnCerrarSesion) {
-    btnCerrarSesion.addEventListener('click', () => {
-        localStorage.removeItem('sesionActiva');
-        localStorage.removeItem('usuario');
-        window.location.href = '../login/index.html';
-    }
-)}
-
-btnCerrarSesion.addEventListener('click', () => {
-    localStorage.removeItem('sesionActiva');
-    localStorage.removeItem('usuario');
-    window.location.href = '../login/index.html';
-})  

@@ -1,5 +1,10 @@
 let productos = JSON.parse(localStorage.getItem('productos')) || [];
 
+// Validar sesión activa
+if (localStorage.getItem('sesionActiva') !== 'true') {
+    window.location.href = '../login/index.html';
+}
+
 function renderProductos() {
     const tbody = document.getElementById('tablaProductos');
     tbody.innerHTML = '';

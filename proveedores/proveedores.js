@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Validar sesión activa
+    if (localStorage.getItem('sesionActiva') !== 'true') {
+        window.location.href = '../login/index.html';
+        return;
+    }
+
     const form = document.getElementById("formProveedor");
     const tabla = document.getElementById("tablaProveedores");
 
