@@ -1,20 +1,31 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
 
-if (darkModeToggle) {
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    darkModeToggle.textContent = '☀️';
-  }
+    // Función para aplicar el tema
+    const setTheme = (isDark) => {
+        if (isDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('darkMode', 'enabled');
+            if (darkModeToggle) darkModeToggle.textContent = '☀️';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            document.body.removeAttribute('data-theme');
+            localStorage.setItem('darkMode', 'disabled');
+            if (darkModeToggle) darkModeToggle.textContent = '🌙';
+        }
+    };
 
-  darkModeToggle.addEventListener('click', () => {
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('darkMode', 'disabled');
-      darkModeToggle.textContent = '🌙';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('darkMode', 'enabled');
-      darkModeToggle.textContent = '☀️';
+    // Cargar preferencia guardada al iniciar
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        setTheme(true);
     }
-  });
-}
+
+    // Escuchar clic en el botón
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            const isCurrentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            setTheme(!isCurrentlyDark);
+        });
+    }
+});
